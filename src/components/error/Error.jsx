@@ -1,3 +1,4 @@
+import React from "react";
 const Error = () => {
   return <h2>Ошибка ответа сервера</h2>;
 };

@@ -1,5 +1,5 @@
 import style from "./Pagination.module.css";
-import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
+import ReactPaginate from "react-paginate";
 
 const Pagination = ({ handlePageClick, pageCount }) => {
   return (

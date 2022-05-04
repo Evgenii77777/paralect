@@ -10,6 +10,7 @@ const UserList = ({ isEmptyList, isEmptyName }) => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 4;
+
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     if (isEmptyList.length !== 0 && !listError && !userError) {
@@ -46,11 +47,22 @@ const UserList = ({ isEmptyList, isEmptyName }) => {
           </ul>
         </>
       )}
-      <Pagination
-        currentItems={currentItems}
-        handlePageClick={handlePageClick}
-        pageCount={pageCount}
-      />
+      <div className={style.stats}>
+        {currentItems && (
+          <>
+            <span>{itemOffset + 1}</span>
+            <span>-</span>
+            <span>{itemOffset + currentItems.length}</span>
+            <span className={style.span__repo}>{isEmptyName.public_repos}</span>
+            <span className={style.span__items}>items</span>
+          </>
+        )}
+        <Pagination
+          currentItems={currentItems}
+          handlePageClick={handlePageClick}
+          pageCount={pageCount}
+        />
+      </div>
     </>
   );
 };
