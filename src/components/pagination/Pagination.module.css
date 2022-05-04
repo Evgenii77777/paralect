@@ -1,0 +1,39 @@
+.list {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  align-items: center;
+  color: #808080;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.item:not(:last-child) {
+  margin-right: 16px;
+}
+.list button:disabled {
+  cursor: none;
+}
+.active {
+  padding: 2px 6px;
+  background: #0064eb;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  align-items: center;
+  color: #ffffff;
+}
+.next {
+  margin-right: 16px;
+}
+@media (min-width: 320px) and (max-width: 767.99px) {
+  .list {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  padding-left: 41px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #0064eb;
+}
+.wrapper {
+  margin-right: 22px;
+  width: 40px;
+  height: 40px;
+}
+.label {
+  position: relative;
+}
+.input {
+  padding-left: 44px;
+  height: 40px;
+  max-width: 500px;
+  width: 500px;
+  border: none;
+  border-radius: 4px;
+}
+.img {
+  position: absolute;
+  top: 0px;
+  left: 14px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .input {
+    width: 100%;
+  }
+  .form__container {
+    width: 100%;
+  }
+}
