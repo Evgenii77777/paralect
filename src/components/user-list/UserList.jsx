@@ -16,6 +16,7 @@ const UserList = ({ isEmptyList, isEmptyName }) => {
       setCurrentItems(isEmptyList.slice(itemOffset, endOffset));
     }
     setPageCount(Math.ceil(isEmptyList.length / itemsPerPage));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [itemOffset, itemsPerPage, isEmptyList]);
 
   const handlePageClick = (event) => {
